@@ -154,8 +154,17 @@
                     <span class="hora">8:15</span>
             </a>
         </div>
-        <div><h4 class="email">Apoyame descargando mi App Calculadora</h4></div>
-        <button class="btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share', '_blank')">Calculadora</button>
-    </div>   
+        <div><h4 class="email">Apoyame descargando mi App Calculadora desde la play store click en el boton</h4></div>
+        <button class="btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share', '_blank')">Ir a la Play Store</button>
+        <button class="btn" onclick="enviarWhatsapp()">Comparte la App</button>
+    </div> 
+    <script>
+        function enviarWhatsapp() {
+          const mensaje = encodeURIComponent("Hola, Descarga mi app. Gracias por apoyarme 📱❤️");
+          const mensaje2 = encodeURIComponent("https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share");
+          const url = "https://wa.me/?text=" + mensaje + mensaje2;
+          window.open(url, '_blank');
+        }
+      </script>  
 </body>
 </html>
