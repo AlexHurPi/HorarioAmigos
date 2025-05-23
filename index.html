@@ -48,7 +48,7 @@
             gap: 10px;
             margin-top: 10px;
         }     
-        .vacio{
+        .no-clases{
             text-decoration: none;
             padding: 10px;
             background-color: #cb1f1f;
@@ -85,6 +85,13 @@
         .email{
             color:#007bff;
         }
+        .buttobutton-container{
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            margin-top: 20px;
+            
+        }
         .btn{
             background-color: #007bff;
             color: white;
@@ -96,6 +103,11 @@
             transition: all 0.3s ease-in-out;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        .btn .icon {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
+          }
         .btn:hover {
             background-color: #0056b3;
             transform: scale(1.05);
@@ -112,7 +124,7 @@
         
         <div class="day">Lunes</div>
         <div class="link-container">
-            <a class="vacio" target="_blank">NO HAY CLASES</a>
+            <a class="no-clases" target="_blank">NO HAY CLASES</a>
         </div>
 
         <div class="day">Martes</div>
@@ -154,9 +166,23 @@
                     <span class="hora">8:15</span>
             </a>
         </div>
-        <div><h4 class="email">Apoyame descargando mi App Calculadora desde la play store click en el boton</h4></div>
-        <button class="btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share', '_blank')">Ir a la Play Store</button>
-        <button class="btn" onclick="enviarWhatsapp()">Comparte la App</button>
+        <div>
+            <h4 class="email">Apoyame descargando mi App Calculadora desde la play store click en el boton</h4>
+        </div>
+        <div class="button-container">
+            <!-- Botón Google Play -->
+            <button class="btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share', '_blank')">
+                <img src="images/Play store2.png" alt="Google Play" class="icon">
+                Ir a la Play<br> Store
+            </button>
+
+            <!-- Botón WhatsApp -->
+            <button class="btn" onclick="enviarWhatsapp()">
+                <img src="images/IconoWatsapp8.png" alt="WhatsApp" class="icon">
+                Comparte<br>la App
+            </button>
+        </div>
+        
     </div> 
     <script>
         function enviarWhatsapp() {
