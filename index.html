@@ -170,7 +170,7 @@
             <h4 class="email">Apoyame descargando mi App Calculadora desde la play store, click en el boton</h4>
         </div>
         <div class="button-container">
-             <button class="btn" onclick="copiarTexto()">')">
+             <button class="btn" onclick="copiarTexto()">
                 <img src="images/Horario.png" alt="Google Play" class="icon">
                Comparte el horario<br>
             </button>
@@ -198,7 +198,7 @@
          function copiarTexto() {
           const texto = "https://alexhurpi.github.io/HorarioAmigos/";
           navigator.clipboard.writeText(texto)
-            .then(() => alert("✅ Enlace copiado al portapapeles"))
+            .then(() => alert("✅ Enlace copiado al portapapeles, ahora lo puedes pegar en WhatsApp o donde quieras compartirlo."))
             .catch(err => console.error("Error al copiar: ", err));
         }
       </script>  
