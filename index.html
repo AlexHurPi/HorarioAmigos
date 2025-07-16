@@ -85,7 +85,7 @@
         .email{
             color:#007bff;
         }
-        .buttobutton-container{
+        .button-container{
             display: flex;
             flex-direction: row;
             column-gap: 10px;
@@ -170,9 +170,9 @@
             <h4 class="email">Apoyame descargando mi App Calculadora desde la play store, click en el boton</h4>
         </div>
         <div class="button-container">
-             <button class="btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share', '_blank')">
+             <button class="btn" onclick="copiarTexto()">')">
                 <img src="images/Horario.png" alt="Google Play" class="icon">
-                Ir a la Play<br> Store
+               Comparte el horario<br>
             </button>
             <!-- Botón Google Play -->
             <button class="btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share', '_blank')">
@@ -194,6 +194,12 @@
           const mensaje2 = encodeURIComponent("https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share");
           const url = "https://wa.me/?text=" + mensaje + mensaje2;
           window.open(url, '_blank');
+        }
+         function copiarTexto() {
+          const texto = "https://alexhurpi.github.io/HorarioAmigos/";
+          navigator.clipboard.writeText(texto)
+            .then(() => alert("✅ Enlace copiado al portapapeles"))
+            .catch(err => console.error("Error al copiar: ", err));
         }
       </script>  
 </body>
