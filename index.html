@@ -88,8 +88,7 @@
             display: flex;
             flex-direction: row;
             column-gap: 10px;
-            margin-top: 20px;
-            
+            margin-top: 20px;            
         }
         .btn{
             background-color: #007bff;
@@ -128,48 +127,40 @@
 
         <div class="day">Martes</div>
         <div class="link-container">                       
-            <a href="https://us02web.zoom.us/j/89036204634" target="_blank">
-                <span class="titulo">Proyectos</span>
+            <a href="https://us02web.zoom.us/j/82459052792" target="_blank">
+                <span class="titulo">Gerencia y direccion estrategica</span>
+                <span class="hora">6:15</span>
+              </a>  
+              <a href="https://us02web.zoom.us/j/83159782834" target="_blank">
+                <span class="titulo">Analitica de datos</span>
                 <span class="hora">8:15</span>
-              </a>                  
-        </div>
-
+              </a>                    
+        </div>      
         <div class="day">Miércoles</div>
         <div class="link-container">
-            <a href="https://us02web.zoom.us/j/88427270996" target="_blank">
-                <span class="titulo">Arquitectura de TI</span>
+            <a href="https://us02web.zoom.us/j/82730787801" target="_blank">
+                <span class="titulo">Sistemas inteligentes Big data</span>
                 <span class="hora">6:15</span>
-            </a>
-            <a href="https://us02web.zoom.us/j/83159782834" target="_blank">
-                <span class="titulo">Metodos Numericos</span>
-                <span class="hora">8:15</span>
-            </a>
+            </a>           
         </div>
 
         <div class="day">Jueves</div>
         <div class="link-container">
-		<a href="https://us02web.zoom.us/j/89319785141" target="_blank">
-                <span class="titulo">Practica empresarial</span>
-                <span class="hora">6:15</span>
-        </a>
-            	<a href="https://us02web.zoom.us/j/82693069165" target="_blank">
-                    <span class="titulo">Gerencia y gestion de TI</span>
-                    <span class="hora">8:15</span>
-                </a>            
+            <a class="no-clases" target="_blank">NO HAY CLASES</a>
         </div>
 
         <div class="day">Viernes</div>
         <div class="link-container">
-            <a href="https://us02web.zoom.us/j/87929114205" target="_blank">
-                    <span class="titulo">Gestion de Procesos</span>
-                    <span class="hora">8:15</span>
+            <a href="https://us02web.zoom.us/j/85713478883" target="_blank">
+                    <span class="titulo">Investigacion de operaciones</span>
+                    <span class="hora">6:15</span>
             </a>
         </div>
         <div>
             <h4 class="email">Apoyame descargando mi App Calculadora desde la play store, click en el boton</h4>
         </div>
         <div class="button-container">
-             <button class="btn" onclick="copiarTexto()">
+             <button class="btn" onclick="enviarWhatsapp2()">
                 <img src="images/Horario.png" alt="Google Play" class="icon">
                Comparte el horario<br>
             </button>
@@ -192,6 +183,12 @@
           const mensaje = encodeURIComponent("Hola compañero, Descarga mi app, este link te lleva a la Play store. Gracias por apoyarme 📱❤️");
           const mensaje2 = encodeURIComponent("https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share");
           const url = "https://wa.me/?text=" + mensaje + mensaje2;
+          window.open(url, '_blank');
+        }
+        function enviarWhatsapp2() {
+          const mensaje3 = encodeURIComponent("Este es el horario de clases Ing de sistemas momento 3. ");
+          const mensaje4 = encodeURIComponent("https://alexhurpi.github.io/HorarioAmigos/");
+          const url = "https://wa.me/?text=" + mensaje3 + mensaje4;
           window.open(url, '_blank');
         }
          function copiarTexto() {
