@@ -214,6 +214,11 @@
             .then(() => alert("✅ Enlace copiado al portapapeles, ahora lo puedes pegar en WhatsApp o donde quieras compartirlo."))
             .catch(err => console.error("Error al copiar: ", err));
         }
+        function guardarEmail() {
+            const email = document.getElementById('emailInput').value;
+            localStorage.setItem('emailGuardado', email);
+            alert('Email guardado localmente.');
+        }
          window.onload = () => {
             const emailGuardado = localStorage.getItem('emailGuardado');
             if (emailGuardado) {
