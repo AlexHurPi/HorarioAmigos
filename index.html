@@ -225,7 +225,7 @@
             const emailGuardado = localStorage.getItem('emailGuardado');
             if (emailGuardado) {
                 navigator.clipboard.writeText(emailGuardado)
-                    .then(() => alert("✅ Email copiado al portapapeles."))
+                    .then(() => alert("✅ Email copiado al portapapeles: " + emailGuardado))
                     .catch(err => console.error("Error al copiar: ", err));
             } else {
                 alert("No hay email guardado.");
