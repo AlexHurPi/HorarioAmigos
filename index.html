@@ -56,6 +56,15 @@
             transition: background 0.3s;
             display: block;      
         }  
+        .no-clases2{
+            text-decoration: none;
+            padding: 10px;
+            background-color: #cb1f1f;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: block;      
+        }  
         a {
             display: flex;
             flex-direction: row;
@@ -156,6 +165,14 @@
                     <span class="hora">6:15</span>
             </a>
         </div>
+        <div class="link-container">
+            <input id="emailInput" type="email" placeholder="Introduce tú email">
+            <div>
+                <button class="btn" onclick="guardarEmail()">Guardar Email</button>
+                <button class="btn" onclick="copiarTexto()">Copiar Email</button>
+            </div>            
+        </div>
+        
         <div>
             <h4 class="email">Apoyame descargando mi App Calculadora desde la play store, click en el boton</h4>
         </div>
@@ -196,6 +213,12 @@
           navigator.clipboard.writeText(texto)
             .then(() => alert("✅ Enlace copiado al portapapeles, ahora lo puedes pegar en WhatsApp o donde quieras compartirlo."))
             .catch(err => console.error("Error al copiar: ", err));
+        }
+         window.onload = () => {
+            const emailGuardado = localStorage.getItem('emailGuardado');
+            if (emailGuardado) {
+                document.getElementById('emailInput').value = emailGuardado;
+            }
         }
       </script>  
 </body>
