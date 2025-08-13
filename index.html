@@ -214,12 +214,25 @@
             .then(() => alert("✅ Enlace copiado al portapapeles, ahora lo puedes pegar en WhatsApp o donde quieras compartirlo."))
             .catch(err => console.error("Error al copiar: ", err));
         }
+        //guardar el email en localStorage
         function guardarEmail() {
             const email = document.getElementById('emailInput').value;
             localStorage.setItem('emailGuardado', email);
             alert('Email guardado localmente.');
         }
-         window.onload = () => {
+        //copiar el email guardado al cargar la página
+        function copiarEmailGuardado() {
+            const emailGuardado = localStorage.getItem('emailGuardado');
+            if (emailGuardado) {
+                navigator.clipboard.writeText(emailGuardado)
+                    .then(() => alert("✅ Email copiado al portapapeles."))
+                    .catch(err => console.error("Error al copiar: ", err));
+            } else {
+                alert("No hay email guardado.");
+            }
+        }
+        //cargar el email guardado al cargar la página
+        window.onload = () => {
             const emailGuardado = localStorage.getItem('emailGuardado');
             if (emailGuardado) {
                 document.getElementById('emailInput').value = emailGuardado;
