@@ -27,6 +27,10 @@
             color: #333;
             margin-bottom: 10px;
         }
+        h4 {
+            color: #555;
+            margin-top: 20px;
+        }
         .day {
             font-size: 20px;
             font-weight: bold;
@@ -172,6 +176,25 @@
                 <button class="btn" onclick="copiarEmailGuardado()">Copiar Email</button>
             </div>            
         </div>
+
+        <div>
+            <h4>Enlaces de interes:</h4>
+            <a href="https://campusvirtual.usanjose.co/campus/" target="_blank">
+                  <span class="titulo">Campus Virtual</span>
+            </a>
+            <br>
+            <a href="https://sanjoseopciongrado.com/" target="_blank">
+                <span class="titulo">USanJose Opción de Grado</span>
+            </a>
+            <br>
+            <a href="https://sitio.usanjose.edu.co/" target="_blank">
+                  <span class="titulo">Sitio web Usanjose</span>
+            </a>
+            <br>
+             <a href="https://site2.q10.com/" target="_blank">
+                <span class="titulo">Sistema de informacion Q10</span>
+            </a>            
+        </div>
         
         <div>
             <h4 class="email">Apoyame descargando mi App Calculadora desde la play store, click en el boton</h4>
@@ -196,18 +219,21 @@
         
     </div> 
     <script>
+        // Enviar mensaje de WhatsApp con el enlace a la Play Store
         function enviarWhatsapp() {
           const mensaje = encodeURIComponent("Hola compañero, Descarga mi app, este link te lleva a la Play store. Gracias por apoyarme 📱❤️");
           const mensaje2 = encodeURIComponent("https://play.google.com/store/apps/details?id=com.sellersquickcalculator2&pcampaignid=web_share");
           const url = "https://wa.me/?text=" + mensaje + mensaje2;
           window.open(url, '_blank');
         }
+        // Enviar mensaje de WhatsApp con el horario
         function enviarWhatsapp2() {
           const mensaje3 = encodeURIComponent("Este es el horario de clases Ing de sistemas momento 3. ");
           const mensaje4 = encodeURIComponent("https://alexhurpi.github.io/HorarioAmigos/");
           const url = "https://wa.me/?text=" + mensaje3 + mensaje4;
           window.open(url, '_blank');
         }
+        // Copiar enlace al portapapeles
          function copiarTexto() {
           const texto = "https://alexhurpi.github.io/HorarioAmigos/";
           navigator.clipboard.writeText(texto)
