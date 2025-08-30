@@ -8,10 +8,12 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;            
+            display: flex;           
+            justify-content: center;  
+            align-items: center;                          
             height: 100%;
-            margin: 0;            
+            margin: 0;  
+            padding-block: 1%;          
         }
         .container {
             background: white;
@@ -32,11 +34,9 @@
         }
         h5 {            
             color: #f0091c;
-            font-weight:bolder;
-            align-items: start;
-            margin: 1px;
-            text-align: left;
-            
+            font-weight:bolder;            
+            margin: 1px;            
+            display: inline-block;
             animation: zoomAnim 1s infinite alternate;
         }
         @keyframes zoomAnim {
@@ -222,11 +222,12 @@
         </div>
 <!-----------------------------------------Informacion de interes---------------------------------------------------->
         <h4>Información de interés:</h4> 
-        <h5>Nuevo✔️</h5>       
+       <div style="text-align: left;"><h5>Nuevo✔️</h5> </div>
+              
         <a href="https://resultadossaberpro.icfes.edu.co/login" target="_blank">
             <span class="titulo">Link: Consulta tu resultado en las pruebas saber PRO 2025</span>
        </a>         
-         <h5>Nuevo✔️</h5> 
+         <div style="text-align: left;"><h5>Nuevo✔️</h5> </div>
          <div class="infoInteres">
             <p>Informacion: Primer parcial a partir del viernes 05 de septiembre a las 00:00 horas, click arriba en el link de campus virtual</p>           
          </div>        
