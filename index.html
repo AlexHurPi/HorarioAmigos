@@ -30,12 +30,19 @@
             color: #007bff;
             margin-top: 20px;
         }
-        h5 {
+        h5 {            
             color: #f0091c;
             font-weight:bolder;
-            text-align: left;
+            align-items: start;
             margin: 1px;
-           
+            text-align: left;
+            
+            animation: zoomAnim 1s infinite alternate;
+        }
+        @keyframes zoomAnim {
+            0%   { transform: scale(1);}
+            50%  { transform: scale(1.3);}
+            100% { transform: scale(1);}
         }
         .day {
             font-size: 20px;
@@ -85,8 +92,7 @@
             border-radius: 5px;
             transition: background 0.3s;
             align-items: center;
-            justify-content: center;  
-                      
+            justify-content: center;                      
         }
         .titulo {
             margin-right: 10px; 
@@ -133,6 +139,13 @@
             background-color: #003f80;
             transform: scale(0.95);
           }
+        .infoInteres {
+            text-align: left;
+            padding: 10px;            
+            border-radius: 5px;
+            color: white;
+            background-color:#333 ;
+          }
     </style>
 </head>
 <body>
@@ -140,7 +153,7 @@
         <h1>Horario de Clases</h1>
         <h3>Ingeniería de Sistemas</h3>
         <h4>Momento 3</h4>
-
+<!-------------------------------------------Horario de clases---------------------------------------------------->
         <div class="day">Lunes</div>
         <div class="link-container">
             <a class="no-clases" target="_blank">NO HAY CLASES</a>
@@ -184,7 +197,7 @@
                 <button class="btn" onclick="copiarEmailGuardado()">Copiar Email</button>
             </div>            
         </div>
-
+<!-------------------------------------------Enlaces de interes---------------------------------------------------->
         <div>
             <h4>Enlaces de interes:</h4>
             <a href="https://campusvirtual.usanjose.co/campus/" target="_blank">
@@ -207,18 +220,21 @@
                 <span class="titulo">Canal oficial de WhatsApp</span>
             </a>            
         </div>
-
+<!-----------------------------------------Informacion de interes---------------------------------------------------->
         <h4>Información de interés:</h4> 
         <h5>Nuevo✔️</h5>       
         <a href="https://resultadossaberpro.icfes.edu.co/login" target="_blank">
-            <span class="titulo">Consulta tu resultado en las pruebas saber PRO 2025</span>
-       </a>       
+            <span class="titulo">Link: Consulta tu resultado en las pruebas saber PRO 2025</span>
+       </a>         
+         <h5>Nuevo✔️</h5> 
+         <div class="infoInteres">
+            <p>Informacion: Primer parcial a partir del viernes 05 de septiembre a las 00:00 horas, click arriba en el link de campus virtual</p>           
+         </div>        
        <br>
        <a href="https://forms.office.com/pages/responsepage.aspx?id=gcPCyy4vk02R0VBskxas5-Dqqi7j3htAuB8VnhqdVwRURE9KVzlBOExVR1VOOVZKMVVSWlJUSUtJQi4u&route=shorturl" target="_blank">
-            <span class="titulo">Curso INICIACIÓN A LA INTELIGENCIA ARTIFICIAL (Clase de Investigacion)SENA SOFIA PLUS</span>
+            <span class="titulo">Link: Curso INICIACIÓN A LA INTELIGENCIA ARTIFICIAL (Clase de Investigacion)SENA SOFIA PLUS</span>
        </a>
-       
-        
+<!-----------------------------------------Apoyame---------------------------------------------------->       
         <div>
             <h4 class="email">Apoyame descargando mi App Calculadora desde la play store, click en el boton</h4>
         </div>
@@ -238,10 +254,10 @@
                 <img src="images/IconoWatsapp8.png" alt="WhatsApp" class="icon">
                 Comparte<br>la App
             </button>
-        </div>
-        
+        </div>        
     </div> 
     </body>
+<!-----------------------------------------Scripts---------------------------------------------------->
     <script>
         // Enviar mensaje de WhatsApp con el enlace a la Play Store
         function enviarWhatsapp() {
