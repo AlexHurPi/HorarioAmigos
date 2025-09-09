@@ -32,7 +32,11 @@
             color: #007bff;
             margin-top: 20px;
         }
-        h5 {            
+        .animation{
+            text-align: left;            
+        }
+        h5 {     
+            text-align: left;       
             color: #f0091c;
             font-weight:bolder;            
             margin: 1px;            
@@ -51,13 +55,15 @@
             margin-top: 10px;
             border-radius: 5px;
             color: white;
-        }
-        .day:nth-child(even) {
             background-color: #007bff;
-        }
-        .day:nth-child(odd) {
-            background-color: #28a745;
-        }
+        }           
+         .cuadro{
+            background-color: #dcd9d9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+         } 
         .link-container {
             display: flex;
             flex-direction: column;
@@ -77,15 +83,7 @@
             transition: background 0.3s;
             display: block;      
         }  
-        .no-clases2{
-            text-decoration: none;
-            padding: 10px;
-            background-color: #cb1f1f;
-            color: white;
-            border-radius: 5px;
-            transition: background 0.3s;
-            display: block;      
-        }  
+        
         a {
             display: flex;
             flex-direction: row;
@@ -162,6 +160,7 @@
         <h3>Ingeniería de Sistemas</h3>
         <h4>Momento 3</h4>
 <!-------------------------------------------Horario de clases---------------------------------------------------->
+        <div class="cuadro">
         <div class="day">Lunes</div>
         <div class="link-container">
             <a href="https://us02web.zoom.us/j/84405461727" target="_blank">
@@ -169,51 +168,67 @@
                     <span class="hora">6:30 - 9:30 pm</span>
             </a>
         </div>
-
-        <div class="day">Martes</div>
-        <div class="link-container">                       
-            <a href="https://us02web.zoom.us/j/82459052792" target="_blank">
-                <span class="titulo">Gerencia y direccion estrategica</span>
-                <span class="hora">6:15 pm</span>
-              </a>  
-              <a href="https://us02web.zoom.us/j/83159782834" target="_blank">
-                <span class="titulo">Analitica de datos</span>
-                <span class="hora">8:15 pm</span>
-              </a>                    
-        </div>      
-        <div class="day">Miércoles</div>
-        <div class="link-container">
-            <a href="https://us02web.zoom.us/j/82730787801" target="_blank">
-                <span class="titulo">Sistemas inteligentes Big data</span>
-                <span class="hora">6:15 pm</span>
-            </a>           
         </div>
-
-        <div class="day">Jueves</div>
-        <div class="link-container">
-            <a class="no-clases" target="_blank">NO HAY CLASES</a>
+        
+        <div class="cuadro">
+            <div class="day">Martes</div>
+            <div class="link-container">                       
+                <a href="https://us02web.zoom.us/j/82459052792" target="_blank">
+                    <span class="titulo">Gerencia y direccion estrategica</span>
+                    <span class="hora">6:15 pm</span>
+                </a>  
+                <a href="https://us02web.zoom.us/j/83159782834" target="_blank">
+                    <span class="titulo">Analitica de datos</span>
+                    <span class="hora">8:15 pm</span>
+                </a>                    
+            </div>      
         </div>
-
-        <div class="day">Viernes</div>
+        
+        <div class="cuadro">
+            <div class="day">Miércoles</div>
+            <div class="link-container">
+                <a href="https://us02web.zoom.us/j/82730787801" target="_blank">
+                    <span class="titulo">Sistemas inteligentes Big data</span>
+                    <span class="hora">6:15 pm</span>
+                </a>           
+            </div>
+        </div>
+        
+         <div class="cuadro">
+            <div class="day">Jueves</div>
+            <div class="link-container">
+                <a class="no-clases" target="_blank">NO HAY CLASES</a>
+            </div>
+         </div>
+        
+        <div class="cuadro">
+            <div class="day">Viernes</div>
         <div class="link-container">
             <a href="https://us02web.zoom.us/j/85713478883" target="_blank">
                     <span class="titulo">Investigacion de operaciones</span>
                     <span class="hora">6:15 pm</span>
             </a>
         </div>
-         <div class="day">Sábado</div>
-         <div class="link-container">
-            <a href="https://us02web.zoom.us/j/84405461727" target="_blank">
-                    <span class="titulo">Diplomado Analitica y Big data</span>
-                    <span class="hora">6:30 - 9:30 pm</span>
-            </a>            
         </div>
+        
+        <div class="cuadro">
+        <div class="day">Sábado</div>
+            <div class="link-container">
+                <a href="https://us02web.zoom.us/j/84405461727" target="_blank">
+                        <span class="titulo">Diplomado Analitica y Big data</span>
+                        <span class="hora">6:50 - 9:30 pm</span>
+                </a>            
+            </div>
+        </div>
+
+        <div class="cuadro">
         <div class="day">Domingo</div>
         <div class="link-container">
             <a href="https://us02web.zoom.us/j/89400597903" target="_blank">
                     <span class="titulo">Diplomado Analitica y Big data</span>
                     <span class="hora">6:30 - 9:30 pm</span>                   
             </a>
+        </div>
         </div>
 <!-------------------------------------------Email---------------------------------------------------->
         <div class="link-container">
@@ -250,19 +265,13 @@
 <!-----------------------------------------Informacion de interes---------------------------------------------------->
         <h4>Información de interés:</h4> 
         
-          <div style="text-align: left;"><h5>Nuevo✔️</h5> </div>  
-         <div class="infoInteres">
-            <p>Informacion: Hoy finaliza el primer parcial a las 11:59 pm,
-                  click arriba en el link de campus virtual</p>           
-            
-        </div> 
-            <br>          
-        <div style="text-align: left;"><h5>Nuevo✔️</h5> </div>  
-         <div class="infoInteres">            
-            <p>Informacion: Primera clase del diplomado HOY Lunes 08-09-2025 a las 06:30 pm, en el horario de la parte de arriba👆 dia Lunes, click para Big data.</p>
-        </div> 
-            <br>
-           <a href="https://resultadossaberpro.icfes.edu.co/login" target="_blank">
+        <div class="animation"><h5>Nuevo✔️</h5> </div>         
+        <a href="https://docs.google.com/document/d/1Na548Ne5FMjAAjSK-7aYT8ZLMnxa4sCp/edit?usp=sharing&ouid=101354512222144160810&rtpof=true&sd=true" target="_blank">
+            <span class="titulo">Link: apuntes clase 1 de diplomado Big data</span> 
+        </a>
+        <br>          
+       
+        <a href="https://resultadossaberpro.icfes.edu.co/login" target="_blank">
             <span class="titulo">Link: Consulta tu resultado en las pruebas saber PRO 2025</span>
         </a>          
        <br>
